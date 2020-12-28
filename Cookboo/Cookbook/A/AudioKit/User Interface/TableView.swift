@@ -38,7 +38,7 @@ public class TableView: UIView {
         bgcolor.setFill()
         border.fill()
         UIColor.black.setStroke()
-        border.lineWidth = 8
+        border.lineWidth = 1
         border.stroke()
 
         let midline = UIBezierPath()
@@ -63,7 +63,7 @@ public class TableView: UIView {
         bezierPath.addLine(to: CGPoint(x: Double(frame.width), y: (1.0 - Double(table[0]) / absmax * padding) * height))
 
         UIColor.green.setStroke()
-        bezierPath.lineWidth = 2
+        bezierPath.lineWidth = 1
         bezierPath.stroke()
     }
     
