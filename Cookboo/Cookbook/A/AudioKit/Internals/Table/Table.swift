@@ -170,6 +170,19 @@ public class Table: NSObject, MutableCollection, Codable {
         for i in 0 ..< size {
             self[i] = data[0][i]
         }
+        print(size)
+//        for i in 0...1000{
+//            print(data[0][i])
+//        }
+        var start = 0
+        // start = 9000
+        // start = 19000
+        for i in start...(start + 10000){
+            if data[0][i] > 1 || data[0][i] < -1 {
+                print(data[0][i])
+            }
+        }
+        
     }
     
     
@@ -179,9 +192,17 @@ public class Table: NSObject, MutableCollection, Codable {
         self.init(count: size)
 
         guard let data = file.toFloatChannelData() else { return nil }
-        // Note: this is only taking the first channel of a file
         for i in 0 ..< size {
             self[i] = data[1][i]
+        }
+        
+        var start = 0
+        start = 9000
+        // start = 19000
+        for i in start...(start + 1000){
+           // if data[0][i] > 1{
+                print(data[0][i])
+           // }
         }
     }
     
