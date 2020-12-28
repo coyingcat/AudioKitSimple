@@ -50,10 +50,12 @@ public class TableView: UIView {
 
         let bezierPath = UIBezierPath()
         bezierPath.move(to: CGPoint(x: 0.0, y: (1.0 - Double(table[0]) / absmax) * height))
+        print(table.count)
+        
+        let cnt = min(table.count, 375 * 50)
+        for index in 1..<cnt {
 
-        for index in 1..<table.count {
-
-            let xPoint = Double(index) / Double(table.count) * width
+            let xPoint = Double(index) / Double(cnt) * width
 
             let yPoint = (1.0 - Double(table[index]) / absmax * padding) * height
 
