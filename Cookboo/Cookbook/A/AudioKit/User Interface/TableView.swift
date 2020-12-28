@@ -52,12 +52,22 @@ public class TableView: UIView {
         bezierPath.move(to: CGPoint(x: 0.0, y: (1.0 - Double(table[0]) / absmax) * height))
         print(table.count)
         
-        let cnt = min(table.count, 375 * 50)
+      // let cnt = min(table.count, 175000)
+      //  let offset = 50000
+        
+        
+      // let cnt = min(table.count, 100000)
+      //  let offset = 500
+        
+     //   let cnt = min(table.count, 375)
+      //  let offset = 50000
+        
+        let cnt = table.count
+        let offset = 0
         for index in 1..<cnt {
-
             let xPoint = Double(index) / Double(cnt) * width
-
-            let yPoint = (1.0 - Double(table[index]) / absmax * padding) * height
+            let idx = offset + index
+            let yPoint = (1.0 - Double(table[idx]) / absmax * padding) * height
 
             bezierPath.addLine(to: CGPoint(x: xPoint, y: yPoint))
         }
