@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "AudioKit",
+        "repositoryURL": "https://github.com/AudioKit/AudioKit",
+        "state": {
+          "branch": "v5-main",
+          "revision": "b71bcdb2d353fec6825469fc215dcade206b07fd",
+          "version": null
+        }
+      },
+      {
+        "package": "Sliders",
+        "repositoryURL": "https://github.com/spacenation/swiftui-sliders",
+        "state": {
+          "branch": null,
+          "revision": "5109792d45a53c3c41680b8bdb0602b5dde39c9a",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
