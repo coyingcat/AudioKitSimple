@@ -22,9 +22,7 @@ class TableConductor {
         let file = try! AVAudioFile(forReading: url!)
         fileTable = Table(file: file)!
         
-        
-        let rightFile = try! AVAudioFile(forReading: url!)
-        rhsFile = Table(rhsFile: rightFile)!
+        rhsFile = Table(rhsFile: file)!
         
         
         custom = Table(.sine, count: 256)
