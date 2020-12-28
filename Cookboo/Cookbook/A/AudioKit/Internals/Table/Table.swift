@@ -173,6 +173,19 @@ public class Table: NSObject, MutableCollection, Codable {
     }
     
     
+    public
+    convenience init?(rhsFile file: AVAudioFile) {
+        let size = Int(file.length)
+        self.init(count: size)
+
+        guard let data = file.toFloatChannelData() else { return nil }
+        // Note: this is only taking the first channel of a file
+        for i in 0 ..< size {
+            self[i] = data[1][i]
+        }
+    }
+    
+    
     
     public
     convenience init?(rhs file: AVAudioFile) {

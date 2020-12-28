@@ -9,6 +9,9 @@ class TableConductor {
     let triangle: Table
     let sine: Table
     let fileTable: Table
+    
+    let rhsFile: Table
+    
     let custom: Table
 
     init() {
@@ -18,7 +21,12 @@ class TableConductor {
         let url = Bundle.main.resourceURL?.appendingPathComponent("Samples/beat.aiff")
         let file = try! AVAudioFile(forReading: url!)
         fileTable = Table(file: file)!
-
+        
+        
+        let rightFile = try! AVAudioFile(forReading: url!)
+        rhsFile = Table(rhsFile: rightFile)!
+        
+        
         custom = Table(.sine, count: 256)
         for i in custom.indices {
             custom[i] += Float.random(in: -0.3...0.3) + Float(i) / 2_048.0
@@ -31,16 +39,22 @@ struct TableRecipeView: View {
 
     var body: some View {
         VStack {
+            /*
             Text("Square")
             TableDataView(view: TableView(conductor.square))
             Text("Triangle")
             TableDataView(view: TableView(conductor.triangle))
             Text("Sine")
             TableDataView(view: TableView(conductor.sine))
+             */
             Text("File")
             TableDataView(view: TableView(conductor.fileTable))
+            Text("right File")
+            TableDataView(view: TableView(conductor.rhsFile))
+            /*
             Text("Custom Data")
             TableDataView(view: TableView(conductor.custom))
+            */
         }
         .padding()
         .navigationBarTitle(Text("Tables"))
