@@ -1,6 +1,6 @@
 // Copyright AudioKit. All Rights Reserved. Revision History at http://github.com/AudioKit/AudioKit/
 
-#if !os(tvOS)
+
 
 import AVFoundation
 
@@ -162,5 +162,3 @@ public class MIDIPlayer: AVAudioSequencer {
         }
     }
 }
-#endif
-
