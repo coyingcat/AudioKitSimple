@@ -113,7 +113,7 @@ public class TableView: UIView {
 
             let xPoint = Double(index) / Double(table.count) * width
             if xPoint < 1{
-                print(index)
+               // print(index)
             }
             let yPoint = (1.0 - Double(table[index]) / absmax * padding) * height
 
