@@ -7,8 +7,8 @@ import SwiftUI
 
 class DrumSequencerConductor: ObservableObject {
     let engine = AudioEngine()
-    let drums = MIDISampler(name: "Drums")
-    let sequencer = AppleSequencer(filename: "4tracks")
+    let drums = MIDISampler(name: "鼓点")
+    let sequencer = AppleSequencer(filename: "4 个音轨")
     let plot: NodeOutputPlot
 
     @Published var tempo: Float = 120 {
