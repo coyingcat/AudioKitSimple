@@ -3,6 +3,12 @@
 /// Type alias for Tempo to make it clear when we're working with tempo in beats per minute
 public typealias BPM = Double
 
+// beats per minute, BMP
+
+
+
+
+
 import AVFoundation
 
 /// Container for the notion of time in sequencing
@@ -10,6 +16,8 @@ public struct Duration: CustomStringConvertible, Comparable {
     static let secondsPerMinute = 60
 
     /// Duration in beats
+    // 拍子的时间
+    // 一拍的持续时间
     public var beats: Double
 
     /// Samples per second

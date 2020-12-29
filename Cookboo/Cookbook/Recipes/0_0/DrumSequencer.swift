@@ -53,21 +53,28 @@ class DrumSequencerConductor: ObservableObject {
         do {
             let bassDrumURL = Bundle.main.resourceURL?.appendingPathComponent("Samples/bass_drum_C1.wav")
             let bassDrumFile = try AVAudioFile(forReading: bassDrumURL!)
+            
             let clapURL = Bundle.main.resourceURL?.appendingPathComponent("Samples/clap_D#1.wav")
             let clapFile = try AVAudioFile(forReading: clapURL!)
+            
             let closedHiHatURL = Bundle.main.resourceURL?.appendingPathComponent("Samples/closed_hi_hat_F#1.wav")
             let closedHiHatFile = try AVAudioFile(forReading: closedHiHatURL!)
+            
             let hiTomURL = Bundle.main.resourceURL?.appendingPathComponent("Samples/hi_tom_D2.wav")
             let hiTomFile = try AVAudioFile(forReading: hiTomURL!)
+            
             let loTomURL = Bundle.main.resourceURL?.appendingPathComponent("Samples/lo_tom_F1.wav")
             let loTomFile = try AVAudioFile(forReading: loTomURL!)
+            
             let midTomURL = Bundle.main.resourceURL?.appendingPathComponent("Samples/mid_tom_B1.wav")
             let midTomFile = try AVAudioFile(forReading: midTomURL!)
+            
             let openHiHatURL = Bundle.main.resourceURL?.appendingPathComponent("Samples/open_hi_hat_A#1.wav")
             let openHiHatFile = try AVAudioFile(forReading: openHiHatURL!)
+            
             let snareDrumURL = Bundle.main.resourceURL?.appendingPathComponent("Samples/snare_D1.wav")
             let snareDrumFile = try AVAudioFile(forReading: snareDrumURL!)
-
+            /*
             try drums.loadAudioFiles([bassDrumFile,
                                       clapFile,
                                       closedHiHatFile,
@@ -76,7 +83,8 @@ class DrumSequencerConductor: ObservableObject {
                                       midTomFile,
                                       openHiHatFile,
                                       snareDrumFile])
-
+            */
+            try drums.loadAudioFiles([bassDrumFile, snareDrumFile])
         } catch {
             Log("Files Didn't Load")
         }
