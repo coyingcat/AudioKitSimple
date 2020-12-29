@@ -112,7 +112,9 @@ public class TableView: UIView {
         for index in 1..<table.count {
 
             let xPoint = Double(index) / Double(table.count) * width
-
+            if xPoint < 1{
+                print(index)
+            }
             let yPoint = (1.0 - Double(table[index]) / absmax * padding) * height
 
             bezierPath.addLine(to: CGPoint(x: xPoint, y: yPoint))

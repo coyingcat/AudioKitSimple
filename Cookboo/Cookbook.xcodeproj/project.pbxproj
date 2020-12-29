@@ -274,6 +274,19 @@
 		267456712599B38A0030E7AC /* Globals.mm in Sources */ = {isa = PBXBuildFile; fileRef = 267456702599B38A0030E7AC /* Globals.mm */; };
 		267456752599B4530030E7AC /* AUParameterTreeExt.mm in Sources */ = {isa = PBXBuildFile; fileRef = 267456742599B4530030E7AC /* AUParameterTreeExt.mm */; };
 		2674567B2599B5320030E7AC /* DSPBase.mm in Sources */ = {isa = PBXBuildFile; fileRef = 267456792599B5320030E7AC /* DSPBase.mm */; };
+		26A0B638259ABE72006E0A72 /* DrumSequencer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A0B637259ABE72006E0A72 /* DrumSequencer.swift */; };
+		26A0B63B259ABEE2006E0A72 /* AppleSequencer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A0B63A259ABEE2006E0A72 /* AppleSequencer.swift */; };
+		26A0B63E259ABF0B006E0A72 /* NodeOutputPlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A0B63D259ABF0B006E0A72 /* NodeOutputPlot.swift */; };
+		26A0B675259ACEB4006E0A72 /* EZAudioFFT.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A0B66D259ACEB4006E0A72 /* EZAudioFFT.m */; };
+		26A0B676259ACEB4006E0A72 /* EZPlot.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A0B66F259ACEB4006E0A72 /* EZPlot.m */; };
+		26A0B677259ACEB4006E0A72 /* EZAudioPlot.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A0B670259ACEB4006E0A72 /* EZAudioPlot.m */; };
+		26A0B678259ACEB4006E0A72 /* EZAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A0B671259ACEB4006E0A72 /* EZAudio.m */; };
+		26A0B679259ACEB4006E0A72 /* EZAudioUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A0B672259ACEB4006E0A72 /* EZAudioUtilities.m */; };
+		26A0B67A259ACEB4006E0A72 /* EZAudioDisplayLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A0B673259ACEB4006E0A72 /* EZAudioDisplayLink.m */; };
+		26A0B681259ACEE7006E0A72 /* MusicTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A0B67C259ACEE7006E0A72 /* MusicTrack.swift */; };
+		26A0B682259ACEE7006E0A72 /* NodeFFTPlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A0B67D259ACEE7006E0A72 /* NodeFFTPlot.swift */; };
+		26A0B683259ACEE7006E0A72 /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 26A0B67E259ACEE7006E0A72 /* TPCircularBuffer.c */; };
+		26A0B684259ACEE7006E0A72 /* PlotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A0B680259ACEE7006E0A72 /* PlotView.swift */; };
 		26B117F32581D0A800ED6836 /* PointTrackConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B117B42581D0A800ED6836 /* PointTrackConfiguration.swift */; };
 		26B117F42581D0A800ED6836 /* EnvironmentValues+PointTrackConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B117B52581D0A800ED6836 /* EnvironmentValues+PointTrackConfiguration.swift */; };
 		26B117F52581D0A800ED6836 /* EnvironmentValues+TrackPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B117B62581D0A800ED6836 /* EnvironmentValues+TrackPoint.swift */; };
@@ -591,6 +604,26 @@
 		267456772599B4B10030E7AC /* Interop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Interop.h; sourceTree = "<group>"; };
 		267456792599B5320030E7AC /* DSPBase.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DSPBase.mm; sourceTree = "<group>"; };
 		2674567A2599B5320030E7AC /* DSPBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPBase.h; sourceTree = "<group>"; };
+		26A0B637259ABE72006E0A72 /* DrumSequencer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DrumSequencer.swift; path = Cookbook/Recipes/0_0/DrumSequencer.swift; sourceTree = SOURCE_ROOT; };
+		26A0B63A259ABEE2006E0A72 /* AppleSequencer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleSequencer.swift; sourceTree = "<group>"; };
+		26A0B63D259ABF0B006E0A72 /* NodeOutputPlot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeOutputPlot.swift; sourceTree = "<group>"; };
+		26A0B669259ACEB4006E0A72 /* EZPlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZPlot.h; sourceTree = "<group>"; };
+		26A0B66A259ACEB4006E0A72 /* EZAudioUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZAudioUtilities.h; sourceTree = "<group>"; };
+		26A0B66B259ACEB4006E0A72 /* EZAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZAudio.h; sourceTree = "<group>"; };
+		26A0B66C259ACEB4006E0A72 /* EZAudioPlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZAudioPlot.h; sourceTree = "<group>"; };
+		26A0B66D259ACEB4006E0A72 /* EZAudioFFT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZAudioFFT.m; sourceTree = "<group>"; };
+		26A0B66E259ACEB4006E0A72 /* EZAudioDisplayLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZAudioDisplayLink.h; sourceTree = "<group>"; };
+		26A0B66F259ACEB4006E0A72 /* EZPlot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZPlot.m; sourceTree = "<group>"; };
+		26A0B670259ACEB4006E0A72 /* EZAudioPlot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZAudioPlot.m; sourceTree = "<group>"; };
+		26A0B671259ACEB4006E0A72 /* EZAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZAudio.m; sourceTree = "<group>"; };
+		26A0B672259ACEB4006E0A72 /* EZAudioUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZAudioUtilities.m; sourceTree = "<group>"; };
+		26A0B673259ACEB4006E0A72 /* EZAudioDisplayLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZAudioDisplayLink.m; sourceTree = "<group>"; };
+		26A0B674259ACEB4006E0A72 /* EZAudioFFT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZAudioFFT.h; sourceTree = "<group>"; };
+		26A0B67C259ACEE7006E0A72 /* MusicTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicTrack.swift; sourceTree = "<group>"; };
+		26A0B67D259ACEE7006E0A72 /* NodeFFTPlot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeFFTPlot.swift; sourceTree = "<group>"; };
+		26A0B67E259ACEE7006E0A72 /* TPCircularBuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TPCircularBuffer.c; sourceTree = "<group>"; };
+		26A0B67F259ACEE7006E0A72 /* TPCircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCircularBuffer.h; sourceTree = "<group>"; };
+		26A0B680259ACEE7006E0A72 /* PlotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlotView.swift; sourceTree = "<group>"; };
 		26B117B42581D0A800ED6836 /* PointTrackConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointTrackConfiguration.swift; sourceTree = "<group>"; };
 		26B117B52581D0A800ED6836 /* EnvironmentValues+PointTrackConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+PointTrackConfiguration.swift"; sourceTree = "<group>"; };
 		26B117B62581D0A800ED6836 /* EnvironmentValues+TrackPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+TrackPoint.swift"; sourceTree = "<group>"; };
@@ -690,6 +723,7 @@
 		2667E9F42598FC4900128365 /* 1_0 */ = {
 			isa = PBXGroup;
 			children = (
+				26A0B637259ABE72006E0A72 /* DrumSequencer.swift */,
 				2667E9F62598FC4900128365 /* Table_.swift */,
 			);
 			path = 1_0;
@@ -736,6 +770,7 @@
 		26745385259977630030E7AC /* Apple Sequencer */ = {
 			isa = PBXGroup;
 			children = (
+				26A0B63A259ABEE2006E0A72 /* AppleSequencer.swift */,
 				26745387259977630030E7AC /* MIDIMetaEvent+allocate.swift */,
 				26745389259977630030E7AC /* TimeSignature.swift */,
 			);
@@ -1345,6 +1380,7 @@
 		267454D3259977630030E7AC /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
+				26A0B63D259ABF0B006E0A72 /* NodeOutputPlot.swift */,
 				267454D4259977630030E7AC /* Waveform.swift */,
 				267454D5259977630030E7AC /* WaveformLayer.swift */,
 				267454D8259977630030E7AC /* ADSRView.swift */,
@@ -1358,18 +1394,43 @@
 		267456682599AE940030E7AC /* CAudioKit */ = {
 			isa = PBXGroup;
 			children = (
-				2674567A2599B5320030E7AC /* DSPBase.h */,
-				267456792599B5320030E7AC /* DSPBase.mm */,
-				267456772599B4B10030E7AC /* Interop.h */,
+				26A0B668259ACEB4006E0A72 /* Second */,
 				267456732599B4520030E7AC /* AUParameterTreeExt.h */,
 				267456742599B4530030E7AC /* AUParameterTreeExt.mm */,
-				2674566F2599B3890030E7AC /* Globals.h */,
-				267456702599B38A0030E7AC /* Globals.mm */,
+				267456692599AEC70030E7AC /* Cookbook-Bridging-Header.h */,
+				2674567A2599B5320030E7AC /* DSPBase.h */,
+				267456792599B5320030E7AC /* DSPBase.mm */,
 				2674566A2599AEC80030E7AC /* ExceptionCatcher.h */,
 				2674566B2599AEC80030E7AC /* ExceptionCatcher.m */,
-				267456692599AEC70030E7AC /* Cookbook-Bridging-Header.h */,
+				2674566F2599B3890030E7AC /* Globals.h */,
+				267456702599B38A0030E7AC /* Globals.mm */,
+				267456772599B4B10030E7AC /* Interop.h */,
 			);
 			path = CAudioKit;
+			sourceTree = "<group>";
+		};
+		26A0B668259ACEB4006E0A72 /* Second */ = {
+			isa = PBXGroup;
+			children = (
+				26A0B67C259ACEE7006E0A72 /* MusicTrack.swift */,
+				26A0B67D259ACEE7006E0A72 /* NodeFFTPlot.swift */,
+				26A0B680259ACEE7006E0A72 /* PlotView.swift */,
+				26A0B67E259ACEE7006E0A72 /* TPCircularBuffer.c */,
+				26A0B67F259ACEE7006E0A72 /* TPCircularBuffer.h */,
+				26A0B669259ACEB4006E0A72 /* EZPlot.h */,
+				26A0B66A259ACEB4006E0A72 /* EZAudioUtilities.h */,
+				26A0B66B259ACEB4006E0A72 /* EZAudio.h */,
+				26A0B66C259ACEB4006E0A72 /* EZAudioPlot.h */,
+				26A0B66D259ACEB4006E0A72 /* EZAudioFFT.m */,
+				26A0B66E259ACEB4006E0A72 /* EZAudioDisplayLink.h */,
+				26A0B66F259ACEB4006E0A72 /* EZPlot.m */,
+				26A0B670259ACEB4006E0A72 /* EZAudioPlot.m */,
+				26A0B671259ACEB4006E0A72 /* EZAudio.m */,
+				26A0B672259ACEB4006E0A72 /* EZAudioUtilities.m */,
+				26A0B673259ACEB4006E0A72 /* EZAudioDisplayLink.m */,
+				26A0B674259ACEB4006E0A72 /* EZAudioFFT.h */,
+			);
+			path = Second;
 			sourceTree = "<group>";
 		};
 		26B117B22581D0A800ED6836 /* Sliders */ = {
@@ -1939,6 +2000,7 @@
 			files = (
 				2674556A259977640030E7AC /* LowShelfFilter.swift in Sources */,
 				26B1181C2581D0A900ED6836 /* AccentColor.swift in Sources */,
+				26A0B684259ACEE7006E0A72 /* PlotView.swift in Sources */,
 				26B118072581D0A800ED6836 /* EnvironmentValues+TrackRange.swift in Sources */,
 				267454FE259977640030E7AC /* MIDICustomMetaEvent.swift in Sources */,
 				267455A5259977640030E7AC /* addOperation.swift in Sources */,
@@ -1947,6 +2009,7 @@
 				267454F6259977640030E7AC /* BluetoothMIDIButton.swift in Sources */,
 				267454FA259977640030E7AC /* MIDIListener.swift in Sources */,
 				26745588259977640030E7AC /* Reverb.swift in Sources */,
+				26A0B675259ACEB4006E0A72 /* EZAudioFFT.m in Sources */,
 				2674559E259977640030E7AC /* subtractOperation.swift in Sources */,
 				267455C4259977640030E7AC /* modalResonanceFilterOperation.swift in Sources */,
 				267455B5259977640030E7AC /* phasorOperation.swift in Sources */,
@@ -1966,6 +2029,7 @@
 				26B118182581D0A900ED6836 /* DefaultVerticalValueView.swift in Sources */,
 				26B117F52581D0A800ED6836 /* EnvironmentValues+TrackPoint.swift in Sources */,
 				267455AF259977640030E7AC /* sawtoothOperation.swift in Sources */,
+				26A0B676259ACEB4006E0A72 /* EZPlot.m in Sources */,
 				267455FD259977640030E7AC /* WaveformLayer.swift in Sources */,
 				26B118042581D0A800ED6836 /* PointSlider.swift in Sources */,
 				267455CA259977640030E7AC /* bitcrushOperation.swift in Sources */,
@@ -1975,6 +2039,7 @@
 				C446DF232528D9CA00138D0A /* PlayerControls.swift in Sources */,
 				267455CC259977640030E7AC /* pitchShiftOperation.swift in Sources */,
 				2667EA552598FC4900128365 /* Table_.swift in Sources */,
+				26A0B679259ACEB4006E0A72 /* EZAudioUtilities.m in Sources */,
 				2674551C259977640030E7AC /* MIDIObserverMaster.swift in Sources */,
 				267456612599AC480030E7AC /* NodeParameter.swift in Sources */,
 				267455BA259977640030E7AC /* pinkNoiseOperation.swift in Sources */,
@@ -1993,6 +2058,7 @@
 				26745512259977640030E7AC /* MIDIPacket+Extensions.swift in Sources */,
 				267454E2259977640030E7AC /* FormatConverter.swift in Sources */,
 				267455DC259977640030E7AC /* Device.swift in Sources */,
+				26A0B678259ACEB4006E0A72 /* EZAudio.m in Sources */,
 				267454EE259977640030E7AC /* Duration.swift in Sources */,
 				26B1180B2581D0A900ED6836 /* ValueSliderStyle.swift in Sources */,
 				267455BF259977640030E7AC /* dcBlockOperation.swift in Sources */,
@@ -2029,6 +2095,9 @@
 				267455A8259977640030E7AC /* divideOperation.swift in Sources */,
 				26B117F42581D0A800ED6836 /* EnvironmentValues+PointTrackConfiguration.swift in Sources */,
 				267455BE259977640030E7AC /* korgLowPassFilterOperation.swift in Sources */,
+				26A0B683259ACEE7006E0A72 /* TPCircularBuffer.c in Sources */,
+				26A0B63B259ABEE2006E0A72 /* AppleSequencer.swift in Sources */,
+				26A0B681259ACEE7006E0A72 /* MusicTrack.swift in Sources */,
 				26745515259977640030E7AC /* MIDIEndpointInfo.swift in Sources */,
 				267455AA259977640030E7AC /* minOperation.swift in Sources */,
 				26745521259977640030E7AC /* MIDIClockListener.swift in Sources */,
@@ -2088,12 +2157,14 @@
 				26745506259977640030E7AC /* MIDI+Sending.swift in Sources */,
 				267455D1259977640030E7AC /* smoothDelayOperation.swift in Sources */,
 				267455E2259977640030E7AC /* TuningTable+Wilson.swift in Sources */,
+				26A0B67A259ACEB4006E0A72 /* EZAudioDisplayLink.m in Sources */,
 				267456712599B38A0030E7AC /* Globals.mm in Sources */,
 				2674559D259977640030E7AC /* countOperation.swift in Sources */,
 				267455B1259977640030E7AC /* sineWaveOperation.swift in Sources */,
 				26B118152581D0A900ED6836 /* EnvironmentValues+TrackValue.swift in Sources */,
 				2674550B259977640030E7AC /* MIDIFile.swift in Sources */,
 				2674551A259977640030E7AC /* MIDIMonoPolyListener.swift in Sources */,
+				26A0B682259ACEE7006E0A72 /* NodeFFTPlot.swift in Sources */,
 				26745602259977640030E7AC /* KeyboardView.swift in Sources */,
 				267455C9259977640030E7AC /* distortOperation.swift in Sources */,
 				267455AD259977640030E7AC /* Numeric.swift in Sources */,
@@ -2136,6 +2207,7 @@
 				26745598259977640030E7AC /* periodicTriggerOperation.swift in Sources */,
 				267455E0259977640030E7AC /* TuningTable+RecurrenceRelation.swift in Sources */,
 				26745593259977640030E7AC /* Node.swift in Sources */,
+				26A0B638259ABE72006E0A72 /* DrumSequencer.swift in Sources */,
 				26745513259977640030E7AC /* MIDIPacket+SequenceType.swift in Sources */,
 				267455B9259977640030E7AC /* vocalTractOperation.swift in Sources */,
 				26745584259977640030E7AC /* Distortion.swift in Sources */,
@@ -2145,6 +2217,8 @@
 				267455CB259977640030E7AC /* clipOperation.swift in Sources */,
 				26745536259977640030E7AC /* AppleSampler+getAUPresetXML.swift in Sources */,
 				26745518259977640030E7AC /* MIDIPlayer.swift in Sources */,
+				26A0B63E259ABF0B006E0A72 /* NodeOutputPlot.swift in Sources */,
+				26A0B677259ACEB4006E0A72 /* EZAudioPlot.m in Sources */,
 				26745503259977640030E7AC /* MIDIHelper.swift in Sources */,
 				267454EF259977640030E7AC /* FFTTap.swift in Sources */,
 				267454F3259977640030E7AC /* AmplitudeTap.swift in Sources */,

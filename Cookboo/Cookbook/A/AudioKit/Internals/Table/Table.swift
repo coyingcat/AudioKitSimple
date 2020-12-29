@@ -201,7 +201,7 @@ public class Table: NSObject, MutableCollection, Codable {
         // start = 19000
         for i in start...(start + 1000){
            // if data[0][i] > 1{
-                print(data[0][i])
+           //     print(data[1][i])
            // }
         }
     }

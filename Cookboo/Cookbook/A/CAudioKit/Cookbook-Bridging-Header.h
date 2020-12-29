@@ -16,3 +16,11 @@
 
 
 #import "DSPBase.h"
+
+
+
+#import "EZAudioPlot.h"
+
+
+#import "EZAudioFFT.h"
+

@@ -19,6 +19,7 @@ struct MasterView: View {
         Form {
             Section(header: Text("Uncategorized Demos")) {
                 Section {
+                    NavigationLink(destination: DrumSequencerView()) { Text("Drum Sequencer") }
                     NavigationLink(destination: TableRecipeView()) { Text("Tables") }
                 }
             }
