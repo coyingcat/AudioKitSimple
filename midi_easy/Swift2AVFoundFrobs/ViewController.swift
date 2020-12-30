@@ -26,22 +26,42 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
-    @IBAction func play(sender: UIButton) {
+    
+    
+    @IBAction func playIt(_ sender: Any) {
         
         if let s = sequencer {
             print("playing")
             s.play()
         }
-    }
-   
-    @IBAction func noteOn(sender: UIButton) {
         
     }
+    
+    
+    
+  
+    @IBAction func noteOn__touchDown(_ sender: Any) {
+        print(#function)
+        sequencer?.playNoteOn(channel: 0, noteNum: 60, velocity: 100)
+    }
+    
+    
+    
+    
+    @IBAction func noteOff__touchUpInside(_ sender: Any) {
+        print(#function)
+        sequencer?.playNoteOff(channel: 0, noteNum: 60)
+        
+    }
+    
+    
+    
+ 
+    
+    
 
     
-    @IBAction func noteOff(sender: UIButton) {
-        
-    }
+    
+    
 }
 
