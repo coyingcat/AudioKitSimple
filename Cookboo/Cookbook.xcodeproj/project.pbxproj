@@ -120,7 +120,6 @@
 		26745515259977640030E7AC /* MIDIEndpointInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267453BD259977630030E7AC /* MIDIEndpointInfo.swift */; };
 		26745516259977640030E7AC /* MIDINoteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267453BE259977630030E7AC /* MIDINoteData.swift */; };
 		26745517259977640030E7AC /* MIDISampler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267453BF259977630030E7AC /* MIDISampler.swift */; };
-		26745518259977640030E7AC /* MIDIPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267453C0259977630030E7AC /* MIDIPlayer.swift */; };
 		26745519259977640030E7AC /* MIDINode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267453C1259977630030E7AC /* MIDINode.swift */; };
 		2674551A259977640030E7AC /* MIDIMonoPolyListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267453C3259977630030E7AC /* MIDIMonoPolyListener.swift */; };
 		2674551B259977640030E7AC /* MIDISystemRealTimeObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267453C4259977630030E7AC /* MIDISystemRealTimeObserver.swift */; };
@@ -442,7 +441,6 @@
 		267453BD259977630030E7AC /* MIDIEndpointInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIDIEndpointInfo.swift; sourceTree = "<group>"; };
 		267453BE259977630030E7AC /* MIDINoteData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIDINoteData.swift; sourceTree = "<group>"; };
 		267453BF259977630030E7AC /* MIDISampler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIDISampler.swift; sourceTree = "<group>"; };
-		267453C0259977630030E7AC /* MIDIPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIDIPlayer.swift; sourceTree = "<group>"; };
 		267453C1259977630030E7AC /* MIDINode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIDINode.swift; sourceTree = "<group>"; };
 		267453C3259977630030E7AC /* MIDIMonoPolyListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIDIMonoPolyListener.swift; sourceTree = "<group>"; };
 		267453C4259977630030E7AC /* MIDISystemRealTimeObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIDISystemRealTimeObserver.swift; sourceTree = "<group>"; };
@@ -812,7 +810,6 @@
 				267453BD259977630030E7AC /* MIDIEndpointInfo.swift */,
 				267453BE259977630030E7AC /* MIDINoteData.swift */,
 				267453BF259977630030E7AC /* MIDISampler.swift */,
-				267453C0259977630030E7AC /* MIDIPlayer.swift */,
 				267453C1259977630030E7AC /* MIDINode.swift */,
 				267453C2259977630030E7AC /* Listeners */,
 				267453CC259977630030E7AC /* MIDI+Receiving.swift */,
@@ -2212,7 +2209,6 @@
 				26745594259977640030E7AC /* metronomeOperation.swift in Sources */,
 				267455CB259977640030E7AC /* clipOperation.swift in Sources */,
 				26745536259977640030E7AC /* AppleSampler+getAUPresetXML.swift in Sources */,
-				26745518259977640030E7AC /* MIDIPlayer.swift in Sources */,
 				26A0B63E259ABF0B006E0A72 /* NodeOutputPlot.swift in Sources */,
 				26A0B677259ACEB4006E0A72 /* EZAudioPlot.m in Sources */,
 				26745503259977640030E7AC /* MIDIHelper.swift in Sources */,

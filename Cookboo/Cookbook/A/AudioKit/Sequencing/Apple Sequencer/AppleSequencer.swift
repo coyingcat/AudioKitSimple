@@ -86,11 +86,6 @@ open class AppleSequencer: NSObject {
 
     // MARK: - Looping
 
-    /// Set loop functionality of entire sequence
-    public func toggleLoop() {
-        (loopEnabled ? disableLooping() : enableLooping())
-    }
-
     /// Enable looping for all tracks - loops entire sequence
     public func enableLooping() {
         setLoopInfo(length, numberOfLoops: 0)
