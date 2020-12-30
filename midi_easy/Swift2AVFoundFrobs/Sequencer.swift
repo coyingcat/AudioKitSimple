@@ -9,16 +9,6 @@
 import Foundation
 import AVFoundation
 
-/**
-# Using the new AVAudioSequencer class.
-
-The new `AVAudioSequencer` seems to be broken.
-
-Seems to be fixed in beta4.
-
-See blog post by [following this link.](http://rockhoppertech.com/blog/)
-*/
-
 class Sequencer {
     
     // This is the MuseCore soundfont. Change it to the one you have.
@@ -69,10 +59,7 @@ class Sequencer {
         
         
         let tempo = sequencer.tempoTrack
-        print("tempo lengthInBeats \(tempo.lengthInBeats)")
-        print("tempo timeResolution \(tempo.timeResolution)")
 
-        
         for track in sequencer.tracks {
             // the tempo track is not included in sequencer.tracks
             if track == sequencer.tempoTrack {
@@ -81,33 +68,10 @@ class Sequencer {
             
             // setting the destinations crashes if the sequence has already been started
             track.destinationAudioUnit = self.sampler
-            print("track destinationAudioUnit \(String(describing: track.destinationAudioUnit))")
-            // or
-            //print("track destinationMIDIEndpoint \(track.destinationMIDIEndpoint)")
-            print("track loopRange \(track.loopRange)")
-            print("track loopingEnabled \(track.isLoopingEnabled)")
-            print("track numberOfLoops \(track.numberOfLoops)")
-            print("track offsetTime \(track.offsetTime)")
-            print("track muted \(track.isMuted)")
-            
-            print("track soloed \(track.isSoloed)")
-            print("track lengthInBeats \(track.lengthInBeats)")
-            print("track lengthInSeconds \(track.lengthInSeconds)")
-            print("")
-            
-            // If loopRange has not been set, the full track will be looped.
-            // track.loopRange = AVBeatRange(start: 0,length: 10)
 
-            
-            // this crashes. do it on the tempo track
-            //print("track timeResolution \(track.timeResolution)")
         }
         
         sequencer.prepareToPlay()
-        
-        print(sequencer ?? "")
-        
-        //play()
        
     }
     

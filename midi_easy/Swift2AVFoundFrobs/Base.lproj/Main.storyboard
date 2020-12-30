@@ -27,7 +27,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="stW-TX-9oP">
-                                <rect key="frame" x="190.5" y="299" width="33" height="30"/>
+                                <rect key="frame" x="190.5" y="344" width="33" height="30"/>
                                 <state key="normal" title="Note"/>
                                 <connections>
                                     <action selector="noteOff__touchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dzd-gd-gcN"/>
@@ -39,7 +39,7 @@
                         <constraints>
                             <constraint firstItem="8Ng-ZT-Hil" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="150" id="BuU-M2-g4l"/>
                             <constraint firstItem="stW-TX-9oP" firstAttribute="centerX" secondItem="8Ng-ZT-Hil" secondAttribute="centerX" id="TMw-5q-DI8"/>
-                            <constraint firstItem="stW-TX-9oP" firstAttribute="top" secondItem="8Ng-ZT-Hil" secondAttribute="bottom" constant="75" id="cf4-K5-3Qu"/>
+                            <constraint firstItem="stW-TX-9oP" firstAttribute="top" secondItem="8Ng-ZT-Hil" secondAttribute="bottom" constant="120" id="cf4-K5-3Qu"/>
                             <constraint firstItem="8Ng-ZT-Hil" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ftq-m9-yIx"/>
                         </constraints>
                     </view>
