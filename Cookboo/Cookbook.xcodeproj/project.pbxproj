@@ -229,7 +229,6 @@
 		267455D5259977640030E7AC /* StereoOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267454A3259977630030E7AC /* StereoOperation.swift */; };
 		267455D6259977640030E7AC /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267454A4259977630030E7AC /* Operation.swift */; };
 		267455D7259977640030E7AC /* Settings+iOSVariants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267454A7259977630030E7AC /* Settings+iOSVariants.swift */; };
-		267455D8259977640030E7AC /* Settings+macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267454A8259977630030E7AC /* Settings+macOS.swift */; };
 		267455D9259977640030E7AC /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267454A9259977630030E7AC /* Settings.swift */; };
 		267455DA259977640030E7AC /* AVAudioEngine+Devices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267454AB259977630030E7AC /* AVAudioEngine+Devices.swift */; };
 		267455DB259977640030E7AC /* DeviceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267454AC259977630030E7AC /* DeviceUtils.swift */; };
@@ -552,7 +551,6 @@
 		267454A3259977630030E7AC /* StereoOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StereoOperation.swift; sourceTree = "<group>"; };
 		267454A4259977630030E7AC /* Operation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
 		267454A7259977630030E7AC /* Settings+iOSVariants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Settings+iOSVariants.swift"; sourceTree = "<group>"; };
-		267454A8259977630030E7AC /* Settings+macOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Settings+macOS.swift"; sourceTree = "<group>"; };
 		267454A9259977630030E7AC /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		267454AB259977630030E7AC /* AVAudioEngine+Devices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVAudioEngine+Devices.swift"; sourceTree = "<group>"; };
 		267454AC259977630030E7AC /* DeviceUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceUtils.swift; sourceTree = "<group>"; };
@@ -1297,7 +1295,6 @@
 			isa = PBXGroup;
 			children = (
 				267454A7259977630030E7AC /* Settings+iOSVariants.swift */,
-				267454A8259977630030E7AC /* Settings+macOS.swift */,
 				267454A9259977630030E7AC /* Settings.swift */,
 			);
 			path = Settings;
@@ -2089,7 +2086,6 @@
 				26745517259977640030E7AC /* MIDISampler.swift in Sources */,
 				267454E6259977640030E7AC /* MIDIMetaEvent+allocate.swift in Sources */,
 				267455FB259977640030E7AC /* AudioUnit+Helpers.swift in Sources */,
-				267455D8259977640030E7AC /* Settings+macOS.swift in Sources */,
 				267455C5259977640030E7AC /* highPassButterworthFilterOperation.swift in Sources */,
 				267455BD259977640030E7AC /* resonantFilterOperation.swift in Sources */,
 				267455A8259977640030E7AC /* divideOperation.swift in Sources */,
