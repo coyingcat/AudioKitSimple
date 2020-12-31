@@ -138,7 +138,6 @@
 		26745530259977640030E7AC /* VariSpeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267453DD259977630030E7AC /* VariSpeed.swift */; };
 		26745531259977640030E7AC /* Samplers.md in Resources */ = {isa = PBXBuildFile; fileRef = 267453DF259977630030E7AC /* Samplers.md */; };
 		26745532259977640030E7AC /* PreparingSampleSets.md in Resources */ = {isa = PBXBuildFile; fileRef = 267453E0259977630030E7AC /* PreparingSampleSets.md */; };
-		26745533259977640030E7AC /* AppleSampler+SoundFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267453E2259977630030E7AC /* AppleSampler+SoundFont.swift */; };
 		26745534259977640030E7AC /* AppleSampler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267453E3259977630030E7AC /* AppleSampler.swift */; };
 		26745535259977640030E7AC /* PresetBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267453E4259977630030E7AC /* PresetBuilder.swift */; };
 		26745536259977640030E7AC /* AppleSampler+getAUPresetXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267453E5259977630030E7AC /* AppleSampler+getAUPresetXML.swift */; };
@@ -459,7 +458,6 @@
 		267453DD259977630030E7AC /* VariSpeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VariSpeed.swift; sourceTree = "<group>"; };
 		267453DF259977630030E7AC /* Samplers.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Samplers.md; sourceTree = "<group>"; };
 		267453E0259977630030E7AC /* PreparingSampleSets.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = PreparingSampleSets.md; sourceTree = "<group>"; };
-		267453E2259977630030E7AC /* AppleSampler+SoundFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppleSampler+SoundFont.swift"; sourceTree = "<group>"; };
 		267453E3259977630030E7AC /* AppleSampler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleSampler.swift; sourceTree = "<group>"; };
 		267453E4259977630030E7AC /* PresetBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresetBuilder.swift; sourceTree = "<group>"; };
 		267453E5259977630030E7AC /* AppleSampler+getAUPresetXML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppleSampler+getAUPresetXML.swift"; sourceTree = "<group>"; };
@@ -938,7 +936,6 @@
 		267453E1259977630030E7AC /* Apple Sampler */ = {
 			isa = PBXGroup;
 			children = (
-				267453E2259977630030E7AC /* AppleSampler+SoundFont.swift */,
 				267453E3259977630030E7AC /* AppleSampler.swift */,
 				267453E4259977630030E7AC /* PresetBuilder.swift */,
 				267453E5259977630030E7AC /* AppleSampler+getAUPresetXML.swift */,
@@ -2117,7 +2114,6 @@
 				267455A2259977640030E7AC /* randomNumberPulseOperation.swift in Sources */,
 				267454E1259977640030E7AC /* AVAudioFile+Utilities.swift in Sources */,
 				26B118192581D0A900ED6836 /* LinearRangeMath.swift in Sources */,
-				26745533259977640030E7AC /* AppleSampler+SoundFont.swift in Sources */,
 				267455FA259977640030E7AC /* Component.swift in Sources */,
 				C446DF212528D9CA00138D0A /* ParameterSlider.swift in Sources */,
 				26745509259977640030E7AC /* MIDIFileChunkEvent.swift in Sources */,
