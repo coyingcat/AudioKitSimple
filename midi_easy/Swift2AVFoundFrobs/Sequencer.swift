@@ -10,16 +10,12 @@ import Foundation
 import AVFoundation
 
 class Sequencer{
-    
     // This is the MuseCore soundfont. Change it to the one you have.
     let soundFontMuseCoreName = "GeneralUser GS MuseScore v1.442"
     
     var engine = AVAudioEngine()
     var sampler = AVAudioUnitSampler()
-    var sequencer:AVAudioSequencer!
-    let melodicBank = UInt8(kAUSampler_DefaultMelodicBankMSB)
-    let defaultBank = UInt8(kAUSampler_DefaultBankLSB)
-    
+    lazy var sequencer = AVAudioSequencer(audioEngine: engine)
     
     init() {
         setSessionPlayback()
@@ -39,8 +35,6 @@ class Sequencer{
         engineStart()
         
         // finished setting up engine
-        
-        self.sequencer = AVAudioSequencer(audioEngine: self.engine)
         
         guard let fileURL = Bundle.main.url(forResource: "sibeliusGMajor", withExtension: "mid") else {
             fatalError("\"sibeliusGMajor.mid\" file not found.")
@@ -86,18 +80,6 @@ class Sequencer{
 
     }
     
-
-    
-    
-    func bounceEngine() {
-        
-        if self.engine.isRunning {
-            self.engine.stop()
-        } else {
-            engineStart()
-        }
-        
-    }
     
     func engineStart() {
         do {
@@ -153,7 +135,7 @@ class Sequencer{
     }
    
 
-    func loadSF2PresetIntoSampler(preset:UInt8)  {
+    func loadSF2PresetIntoSampler(preset: UInt8){
         
         guard let bankURL = Bundle.main.url(forResource: self.soundFontMuseCoreName, withExtension: "sf2") else {
             fatalError("\(self.soundFontMuseCoreName).sf2 file not found.")
@@ -181,7 +163,7 @@ class Sequencer{
     //MARK: - Audio Session
     
     func setSessionPlayAndRecord() {
-        let session:AVAudioSession = AVAudioSession.sharedInstance()
+        let session = AVAudioSession.sharedInstance()
         
         do {
             try session.setCategory(AVAudioSession.Category.playAndRecord)
@@ -199,7 +181,7 @@ class Sequencer{
     }
     
     func setSessionPlayback() {
-        let session:AVAudioSession = AVAudioSession.sharedInstance()
+        let session = AVAudioSession.sharedInstance()
         
         do {
             try session.setCategory(AVAudioSession.Category.playback)
