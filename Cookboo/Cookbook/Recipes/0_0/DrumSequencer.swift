@@ -93,7 +93,7 @@ class DrumSequencerConductor: ObservableObject {
             Log("Files Didn't Load")
         }
         sequencer.clearRange(start: Duration(beats: 0), duration: Duration(beats: 100))
-        sequencer.debug()
+        
         sequencer.setGlobalMIDIOutput(drums.midiIn)
         sequencer.enableLooping(Duration(beats: 4))
         sequencer.setTempo(150)

@@ -526,43 +526,6 @@ open class AppleSequencer: NSObject {
         return currentPosition % length // can switch to modTime func when/if % is removed
     }
 
-    // MARK: - Other Sequence Properties
-
-    /// Track count
-    open var trackCount: Int {
-        var count: UInt32 = 0
-        if let existingSequence = sequence {
-            MusicSequenceGetTrackCount(existingSequence, &count)
-        }
-        return Int(count)
-    }
-
-    /// Time Resolution, i.e., Pulses per quarter note
-    open var timeResolution: UInt32 {
-        let failedValue: UInt32 = 0
-        guard let existingSequence = sequence else {
-            Log("Couldn't get sequence for time resolution")
-            return failedValue
-        }
-        var tempoTrack: MusicTrack?
-        MusicSequenceGetTempoTrack(existingSequence, &tempoTrack)
-
-        guard let unwrappedTempoTrack = tempoTrack else {
-            Log("No tempo track for time resolution")
-            return failedValue
-        }
-
-        var ppqn: UInt32 = 0
-        var propertyLength: UInt32 = 0
-
-        MusicTrackGetProperty(unwrappedTempoTrack,
-                              kSequenceTrackProperty_TimeResolution,
-                              &ppqn,
-                              &propertyLength)
-
-        return ppqn
-    }
-
     // MARK: - Loading MIDI files
 
     /// Load a MIDI file from the bundle (removes old tracks, if present)
@@ -604,58 +567,6 @@ open class AppleSequencer: NSObject {
             }
         }
         initTracks()
-    }
-
-    // MARK: - Adding MIDI File data to current sequencer
-
-    /// Add tracks from MIDI file to existing sequencer
-    ///
-    /// - Parameters:
-    ///   - filename: Location of the MIDI File
-    ///   - useExistingSequencerLength: flag for automatically setting length of new track to current sequence length
-    ///
-    ///  Will copy only MIDINoteMessage events
-    public func addMIDIFileTracks(_ filename: String, useExistingSequencerLength: Bool = true) {
-        let tempSequencer = AppleSequencer(filename: filename)
-        addMusicTrackNoteData(from: tempSequencer, useExistingSequencerLength: useExistingSequencerLength)
-    }
-
-    /// Add tracks from MIDI file to existing sequencer
-    ///
-    /// - Parameters:
-    ///   - filename: fromURL: URL of MIDI File
-    ///   - useExistingSequencerLength: flag for automatically setting length of new track to current sequence length
-    ///
-    ///  Will copy only MIDINoteMessage events
-    public func addMIDIFileTracks(_ url: URL, useExistingSequencerLength: Bool = true) {
-        let tempSequencer = AppleSequencer(fromURL: url)
-        addMusicTrackNoteData(from: tempSequencer, useExistingSequencerLength: useExistingSequencerLength)
-    }
-
-    /// Creates new MusicTrackManager with copied note event data from another AppleSequencer
-    func addMusicTrackNoteData(from tempSequencer: AppleSequencer, useExistingSequencerLength: Bool) {
-        guard !isPlaying else {
-            Log("Can't add tracks during playback")
-            return
-        }
-
-        let oldLength = length
-        for track in tempSequencer.tracks {
-            let noteData = track.getMIDINoteData()
-
-            if noteData.isEmpty { continue }
-            let addedTrack = newTrack()
-
-            addedTrack?.replaceMIDINoteData(with: noteData)
-
-            if useExistingSequencerLength {
-                addedTrack?.setLength(oldLength)
-            }
-        }
-
-        if loopEnabled {
-            enableLooping()
-        }
     }
 
     /// Initialize all tracks
@@ -703,44 +614,8 @@ open class AppleSequencer: NSObject {
         tracks.removeAll()
     }
 
-    /// Get a new track
-    public func newTrack(_ name: String = "Unnamed") -> MusicTrackManager? {
-        var newMusicTrack: MusicTrack?
-        var count: UInt32 = 0
-        if let existingSequence = sequence {
-            MusicSequenceNewTrack(existingSequence, &newMusicTrack)
-            MusicSequenceGetTrackCount(existingSequence, &count)
-        }
-        if let existingNewMusicTrack = newMusicTrack {
-            tracks.append(MusicTrackManager(musicTrack: existingNewMusicTrack, name: name))
-        }
-
-        return tracks.last
-    }
-
     // MARK: - Delete Tracks
 
-    /// Delete track and remove it from the sequence
-    /// Not to be used during playback
-    public func deleteTrack(trackIndex: Int) {
-        guard !isPlaying else {
-            Log("Can't delete sequencer track during playback")
-            return
-        }
-        guard trackIndex < tracks.count,
-            let internalTrack = tracks[trackIndex].internalMusicTrack else {
-            Log("Can't get track for index")
-            return
-        }
-
-        guard let existingSequence = sequence else {
-            Log("Can't get sequence")
-            return
-        }
-
-        MusicSequenceDisposeTrack(existingSequence, internalTrack)
-        tracks.remove(at: trackIndex)
-    }
 
     /// Clear all non-tempo events from all tracks within the specified range
     //
@@ -764,25 +639,6 @@ open class AppleSequencer: NSObject {
         }
     }
 
-    /// Generate NSData from the sequence
-    public func genData() -> Data? {
-        var status = noErr
-        var ns: Data = Data()
-        var data: Unmanaged<CFData>?
-        if let existingSequence = sequence {
-            status = MusicSequenceFileCreateData(existingSequence, .midiType, .eraseFile, 480, &data)
-
-            if status != noErr {
-                Log("error creating MusicSequence Data")
-                return nil
-            }
-        }
-        if let existingData = data {
-            ns = existingData.takeUnretainedValue() as Data
-        }
-        data?.release()
-        return ns
-    }
 
     /// Print sequence to console
     public func debug() {
@@ -797,37 +653,6 @@ open class AppleSequencer: NSObject {
         for track in tracks {
             track.setMIDIOutput(midiEndpoint)
         }
-    }
-
-    /// Nearest time of quantized beat
-    public func nearestQuantizedPosition(quantizationInBeats: Double) -> Duration {
-        let noteOnTimeRel = currentRelativePosition.beats
-        let quantizationPositions = getQuantizationPositions(quantizationInBeats: quantizationInBeats)
-        let lastSpot = quantizationPositions[0]
-        let nextSpot = quantizationPositions[1]
-        let diffToLastSpot = Duration(beats: noteOnTimeRel) - lastSpot
-        let diffToNextSpot = nextSpot - Duration(beats: noteOnTimeRel)
-        let optimisedQuantTime = (diffToLastSpot < diffToNextSpot ? lastSpot : nextSpot)
-        return optimisedQuantTime
-    }
-
-    /// The last quantized beat
-    public func previousQuantizedPosition(quantizationInBeats: Double) -> Duration {
-        return getQuantizationPositions(quantizationInBeats: quantizationInBeats)[0]
-    }
-
-    /// Next quantized beat
-    public func nextQuantizedPosition(quantizationInBeats: Double) -> Duration {
-        return getQuantizationPositions(quantizationInBeats: quantizationInBeats)[1]
-    }
-
-    /// An array of all quantization points
-    func getQuantizationPositions(quantizationInBeats: Double) -> [Duration] {
-        let noteOnTimeRel = currentRelativePosition.beats
-        let lastSpot = Duration(beats:
-            modTime(noteOnTimeRel - noteOnTimeRel.truncatingRemainder(dividingBy: quantizationInBeats)))
-        let nextSpot = Duration(beats: modTime(lastSpot.beats + quantizationInBeats))
-        return [lastSpot, nextSpot]
     }
 
     /// Time modulus
