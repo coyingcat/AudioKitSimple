@@ -24,8 +24,7 @@ class Sequencer{
         engine.attach(sampler)
         
         let outputHWFormat = engine.outputNode.outputFormat(forBus: 0)
-        let mainMixer = engine.mainMixerNode
-        engine.connect(sampler, to: mainMixer, format: outputHWFormat)
+        engine.connect(sampler, to: engine.mainMixerNode, format: outputHWFormat)
 
         loadSF2PresetIntoSampler(preset: 0)
         
@@ -43,8 +42,7 @@ class Sequencer{
             try sequencer.load(from: fileURL, options: .smfChannelsToTracks)
             print("loaded \(fileURL)")
         } catch {
-            print("\(error)")
-            fatalError("something screwed up while loading midi file.")
+            fatalError("something screwed up while loading midi file \n \(error)")
         }
 
         for track in sequencer.tracks {
@@ -67,7 +65,7 @@ class Sequencer{
             sequencer.stop()
         }
         
-        sequencer.currentPositionInBeats = TimeInterval(0)
+        sequencer.currentPositionInBeats = 0
         sequencer.prepareToPlay()
 
         do {
@@ -136,7 +134,7 @@ class Sequencer{
 
     func loadSF2PresetIntoSampler(preset: UInt8){
         
-        guard let bankURL = Bundle.main.url(forResource: self.soundFontMuseCoreName, withExtension: "sf2") else {
+        guard let bankURL = Bundle.main.url(forResource: soundFontMuseCoreName, withExtension: "sf2") else {
             fatalError("\(self.soundFontMuseCoreName).sf2 file not found.")
         }
         
