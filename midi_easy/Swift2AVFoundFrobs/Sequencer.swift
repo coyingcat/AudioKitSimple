@@ -21,13 +21,12 @@ class Sequencer{
         setSessionPlayback()
         
         // set up the engine
-        
         engine.attach(sampler)
         
         let outputHWFormat = engine.outputNode.outputFormat(forBus: 0)
         let mainMixer = engine.mainMixerNode
         engine.connect(sampler, to: mainMixer, format: outputHWFormat)
-        print(engine)
+
         loadSF2PresetIntoSampler(preset: 0)
         
         addObservers()
