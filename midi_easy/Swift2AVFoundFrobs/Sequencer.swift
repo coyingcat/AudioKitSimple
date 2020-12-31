@@ -17,7 +17,7 @@ class Sequencer{
     var sampler = AVAudioUnitSampler()
     lazy var sequencer = AVAudioSequencer(audioEngine: engine)
     
-    init() {
+    init(){
         setSessionPlayback()
         
         // set up the engine
@@ -161,24 +161,6 @@ class Sequencer{
     
     
     //MARK: - Audio Session
-    
-    func setSessionPlayAndRecord() {
-        let session = AVAudioSession.sharedInstance()
-        
-        do {
-            try session.setCategory(AVAudioSession.Category.playAndRecord)
-        } catch {
-            print("could not set session category")
-            print(error)
-        }
-        do {
-            try session.setActive(true)
-        } catch {
-            print("could not make session active")
-            print(error)
-        }
-        
-    }
     
     func setSessionPlayback() {
         let session = AVAudioSession.sharedInstance()
