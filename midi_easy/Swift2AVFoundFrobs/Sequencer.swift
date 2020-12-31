@@ -9,7 +9,7 @@
 import Foundation
 import AVFoundation
 
-class Sequencer {
+class Sequencer{
     
     // This is the MuseCore soundfont. Change it to the one you have.
     let soundFontMuseCoreName = "GeneralUser GS MuseScore v1.442"
@@ -55,10 +55,6 @@ class Sequencer {
             print("\(error)")
             fatalError("something screwed up while loading midi file.")
         }
-        // yeah? So what do we do with it? Can't add anything. Can't inspect anything.
-        
-        
-        let tempo = sequencer.tempoTrack
 
         for track in sequencer.tracks {
             // the tempo track is not included in sequencer.tracks
@@ -107,11 +103,7 @@ class Sequencer {
         engine.attach(sampler)
         
         engine.connect(sampler, to: mainMixer, format: outputHWFormat)
-//        engine.connect(sampler, to: output, format: outputHWFormat)
-//        engine.connect(sampler, to: output, format: nil)
-//        engine.connect(sampler, to: mainMixer, format: nil)
 
-        
         print(engine)
         
         return (engine, sampler)
@@ -249,11 +241,6 @@ class Sequencer {
     @objc func engineConfigurationChange(notification:NSNotification) {
         print("engine config change")
         engineStart()
-        
-        //userInfo is nil
-        
-        //        print("userInfo")
-        //        print(notification.userInfo)
         
         if let userInfo = notification.userInfo as? Dictionary<String, AnyObject?> {
             print("userInfo")
