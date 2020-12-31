@@ -24,8 +24,6 @@ class Sequencer{
     init() {
         setSessionPlayback()
         
-        //(self.engine, self.sampler) = engineSetup()
-        
         // set up the engine
         
         engine.attach(sampler)
@@ -88,26 +86,7 @@ class Sequencer{
 
     }
     
-    
-    func engineSetup()-> (AVAudioEngine, AVAudioUnitSampler) {
-        
-        let engine = AVAudioEngine()
 
-        let output = engine.outputNode
-        let outputHWFormat = output.outputFormat(forBus: 0)
-
-        let mainMixer = engine.mainMixerNode
-        engine.connect(mainMixer, to: output, format: outputHWFormat)
-        
-        let sampler = AVAudioUnitSampler()
-        engine.attach(sampler)
-        
-        engine.connect(sampler, to: mainMixer, format: outputHWFormat)
-
-        print(engine)
-        
-        return (engine, sampler)
-    }
     
     
     func bounceEngine() {
