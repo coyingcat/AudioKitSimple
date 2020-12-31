@@ -75,6 +75,7 @@ class DrumSequencerConductor: ObservableObject {
             let snareDrumURL = Bundle.main.resourceURL?.appendingPathComponent("Samples/snare_D1.wav")
             let snareDrumFile = try AVAudioFile(forReading: snareDrumURL!)
             /*
+             */
             try drums.loadAudioFiles([bassDrumFile,
                                       clapFile,
                                       closedHiHatFile,
@@ -83,8 +84,11 @@ class DrumSequencerConductor: ObservableObject {
                                       midTomFile,
                                       openHiHatFile,
                                       snareDrumFile])
-            */
+            
+            
+            /*
             try drums.loadAudioFiles([bassDrumFile, snareDrumFile])
+             */
         } catch {
             Log("Files Didn't Load")
         }
@@ -121,12 +125,14 @@ struct DrumSequencerView: View {
 
     var body: some View {
         VStack(spacing: 10) {
+            Spacer()
             Text(conductor.isPlaying ? "Stop" : "Play").onTapGesture {
                 conductor.isPlaying.toggle()
-            }
+            }.padding().border(Color.yellow, width: 2)
             Text("Randomize Hi-hats").onTapGesture {
                 conductor.randomize()
-            }
+            }.padding().border(Color.yellow, width: 2)
+            
             ParameterSlider(text: "Tempo",
                             parameter: self.$conductor.tempo,
                             range: 60 ... 300).padding(5).frame(height: 100)
