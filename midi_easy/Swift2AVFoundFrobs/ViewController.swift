@@ -12,45 +12,34 @@ import AVFoundation
 
 class ViewController: UIViewController {
 
-    var sequencer:Sequencer?
+    lazy var sequencer = Sequencer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
-        sequencer = Sequencer()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    
     
     @IBAction func playIt(_ sender: Any) {
-        
-        if let s = sequencer {
-            print("playing")
-            s.play()
-        }
-        
+
+        // print("playing")
+        sequencer.play()
     }
     
     
     
   
     @IBAction func noteOn__touchDown(_ sender: Any) {
-        print(#function)
-        sequencer?.playNoteOn(channel: 0, noteNum: 60, velocity: 100)
+        // print(#function)
+        sequencer.playNoteOn(channel: 0, noteNum: 60, velocity: 100)
     }
     
     
     
     
     @IBAction func noteOff__touchUpInside(_ sender: Any) {
-        print(#function)
-        sequencer?.playNoteOff(channel: 0, noteNum: 60)
+        // print(#function)
+        sequencer.playNoteOff(channel: 0, noteNum: 60)
         
     }
     
