@@ -124,11 +124,13 @@ struct DrumSequencerView: View {
     @ObservedObject var conductor = DrumSequencerConductor()
 
     var body: some View {
-        VStack(spacing: 10) {
+        VStack(spacing: 10){
             Spacer()
             Text(conductor.isPlaying ? "Stop" : "Play").onTapGesture {
                 conductor.isPlaying.toggle()
             }.padding().border(Color.yellow, width: 2)
+            
+            // 调尖端的波形
             Text("Randomize Hi-hats").onTapGesture {
                 conductor.randomize()
             }.padding().border(Color.yellow, width: 2)
